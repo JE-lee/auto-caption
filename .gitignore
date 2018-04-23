@@ -1,0 +1,4 @@
+node_modules
+ffprobe.js
+package-lock.json
+.vscode

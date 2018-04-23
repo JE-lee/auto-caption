@@ -1,0 +1,25 @@
+{
+  "name": "auto-caption",
+  "version": "1.0.0",
+  "description": "视频自动翻译字幕",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test-wav-helper": "node test/wav-helper.js"
+  },
+  "keywords": [
+    "caption",
+    "AI"
+  ],
+  "author": "JE-lee",
+  "license": "MIT",
+  "devDependencies": {
+    "chalk": "^2.4.0",
+    "fluent-ffmpeg": "^2.1.2",
+    "lodash": "^4.17.5"
+  },
+  "dependencies": {
+    "baidu-aip-sdk": "^2.2.0",
+    "p-queue": "^2.4.1"
+  }
+}
