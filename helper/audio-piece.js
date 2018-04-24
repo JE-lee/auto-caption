@@ -1,8 +1,9 @@
 const getSilencePart = require('./detect-silence.js');
 module.exports = function(mediaPath){
   return getSilencePart(mediaPath)
-    .then((list) => {
-      return _normalizeAudioPiece(list)
+    .then((data) => {
+      data.list = _normalizeAudioPiece(data.list)
+      return data
     })
 }
 
@@ -17,5 +18,6 @@ function _normalizeAudioPiece(list){
       audioDuration: end - start
     })
   }
+  
   return pieces 
 }

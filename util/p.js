@@ -1,4 +1,4 @@
-export function getRetryPromise(getPromise, retry, ...T){
+module.exports =  function getRetryPromise(getPromise, retry, ...T){
   let retryCount = 0
   let f = () => {
     return getPromise(...T).catch((err) => {

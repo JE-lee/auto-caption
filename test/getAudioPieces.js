@@ -4,11 +4,12 @@
 
 const getAudioPieces = require('../helper/audio-piece');
 const chalk = require('chalk');
+const path = require('path');
 
-let mediaPath = 'E:/project/WEB/workspace/node.js/auto-caption/assets/myvoice.m4a'
+let mediaPath = path.resolve(__dirname, '../assets/myvoice.m4a')
 
 getAudioPieces(mediaPath)
-  .then((list) => {
+  .then(({ list }) => {
     console.log(chalk.green('get Audio Pieces success'))
     console.log(chalk.green(JSON.stringify(list)))
   })
